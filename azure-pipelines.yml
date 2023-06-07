@@ -16,9 +16,9 @@ steps:
   inputs:
     gradleBuildFile: 'build.gradle'
     tasks: 'build artifactoryPublish'
-    artifactoryResolverService: 'arti2'
+    artifactoryResolverService: 'arti'
     sourceRepo: 'sri-android-gradle-dev'
-    artifactoryDeployerService: 'arti2'
+    artifactoryDeployerService: 'arti'
     targetRepo: 'sri-android-gradle-dev'
     useWrapper: true
     collectBuildInfo: true
@@ -26,6 +26,6 @@ steps:
     buildNumber: '$(Build.BuildNumber)'
 - task: JFrogPublishBuildInfo@1
   inputs:
-    artifactoryConnection: 'arti2'
+    artifactoryConnection: 'arti'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
