@@ -15,7 +15,7 @@ steps:
 - task: JFrogGradle@1
   inputs:
     gradleBuildFile: 'build.gradle'
-    tasks: 'build artifactoryPublish'
+    tasks: 'artifactoryPublish'
     artifactoryResolverService: 'arti'
     sourceRepo: 'sri-android-gradle-dev'
     artifactoryDeployerService: 'arti'
