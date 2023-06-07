@@ -31,6 +31,8 @@ steps:
     xrayConnection: 'xray'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
+    allowFailBuild: false
+    vuln: false
     
 - task: JFrogPublishBuildInfo@1
   inputs:
