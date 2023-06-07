@@ -26,13 +26,6 @@ steps:
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
 
-- task: JFrogBuildScan@1
-  inputs:
-    xrayConnection: 'xray'
-    buildName: '$(Build.DefinitionName)'
-    buildNumber: '$(Build.BuildNumber)'
-    allowFailBuild: false
-    vuln: false
     
 - task: JFrogPublishBuildInfo@1
   inputs:
