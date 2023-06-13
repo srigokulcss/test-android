@@ -15,7 +15,7 @@ steps:
 - task: JFrogGradle@1
   inputs:
     gradleBuildFile: 'build.gradle'
-    tasks: 'assembleUatGoogleDebug --refresh-dependencies -Dandroid.forceJacocoOutOfProcess=true -PkeyStr=$(PkeyStr) -PsigningConfigs_keyAlias=$(signingConfigs_keyAlias) -PsigningConfigs_keyPassword=$(signingConfigs_keyPassword) -PsigningConfigs_storePassword=$(signingConfigs_storePassword) artifactoryPublish'
+    tasks: 'assembleDebug --refresh-dependencies -Dandroid.forceJacocoOutOfProcess=true -PkeyStr=$(PkeyStr) -PsigningConfigs_keyAlias=$(signingConfigs_keyAlias) -PsigningConfigs_keyPassword=$(signingConfigs_keyPassword) -PsigningConfigs_storePassword=$(signingConfigs_storePassword) artifactoryPublish'
     artifactoryResolverService: 'arti'
     sourceRepo: 'sri-android-gradle-dev'
     artifactoryDeployerService: 'arti'
